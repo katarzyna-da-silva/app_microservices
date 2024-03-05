@@ -2,7 +2,8 @@
 
 ***This project aims to deploy a microservices application for vehicle tracking in the AWS cloud. It leverages various technologies such as Kubernetes, Docker, Terraform, Jenkins, Prometheus, Alert Manager, horizontal scaling, readiness, and CI/CD with Helm.***
 
-### Getting Started
+
+# Getting Started
 
 ## To get started with deploying the application, follow the steps below:
 
@@ -66,7 +67,7 @@ Destroy the Kubernetes cluster when you're done:
 terraform destroy
 
 ````
-## AWS 
+### AWS 
 Setting Up AWS Connection: 
 
 1. FindAccess Key and Secret Key in AWS:
