@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: webapp-deploy
+  name: webapp-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp-deploy
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: webapp-deploy
+    spec:
+      containers:
+      - image: lnebilos/webapp:0.1
+        name: webapp
+        resources: {}
+status: {}
