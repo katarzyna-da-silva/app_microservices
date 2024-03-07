@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: position-tracker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: position-tracker
+  template: 
+    metadata: 
+      labels: 
+        name: position-tracker
+    spec:
+      containers:
+      - name: position-tracker
+        image: lnebilos/position-tracker:0.1
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: production-microservice
