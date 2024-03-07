@@ -1,22 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  labels:
-    app: webapp-deploy
-  name: webapp-deploy
+  name: webapp
 spec:
-  replicas: 1
+  # minReadySeconds: 30
   selector:
     matchLabels:
-      app: webapp-deploy
-  strategy: {}
-  template:
+      app: webapp
+  replicas: 2
+  template: # template for the pods
     metadata:
       labels:
-        app: webapp-deploy
+        app: webapp
     spec:
       containers:
-      - image: lnebilos/webapp:0.1
-        name: webapp
-        resources: {}
-status: {}
+      - name: webapp
+        image: lnebilos/webapp:0.1
