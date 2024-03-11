@@ -78,7 +78,7 @@ aws sts get-caller-identity --profile my_profile
 
 ## CLUSTER CREATION BY TERRAFORM :
 
-
+````
  The most important elements in the Terraform configuration files for running an EKS cluster are:
 
      EKS cluster configuration: In files such as sek-cluster.tf, you must define key cluster parameters such as name, version, network configuration, etc.
@@ -95,6 +95,7 @@ aws sts get-caller-identity --profile my_profile
 
      Outputs and variables: In the sek-outputs.tf and vpc-outputs.tf files, you can define outputs that are useful for storing information about created resources, and variables that facilitate configuration.
 
+````
 
     1.  providers.tf: Terraform provider configuration.
     2.  eks-cluster.tf: The file contains the EKS (Amazon Elastic Kubernetes Service) cluster configuration.
