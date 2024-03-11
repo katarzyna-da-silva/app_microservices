@@ -10,13 +10,14 @@ module "vpc" {
   private_subnets     = ["10.0.1.0/24", "10.0.2.0/24"]
   public_subnets      = ["10.0.101.0/24", "10.0.102.0/24"]
 
-  # EKS Subnets
-  create_eks_subnet_group = true
-  create_eks_subnet_route_table = true
-  eks_subnets = ["10.0.151.0/24", "10.0.152.0/24"]
-  create_eks_nat_gateway_route = true
 
-  # NAT Gateways -  Communication 
+   # EKS Subnets
+  #eks_create_subnet_group       = true
+  #eks_create_subnet_route_table = true
+  #eks_subnets                   = ["10.0.151.0/24", "10.0.152.0/24"]
+  #eks_create_nat_gateway_route  = true
+  
+  # NAT Gateways - Communication
   enable_nat_gateway = true
   single_nat_gateway = true
 
@@ -32,9 +33,6 @@ module "vpc" {
     Type = "private-subnets"
   }
 
-  #database_subnet_tags = {
-  #  Type = "database-subnets"
-  #}
 
   tags = {
     Owner = "katarzyna"
