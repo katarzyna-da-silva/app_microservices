@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fleetman-webapp
+  name: webapp
 spec:
   selector:
     name: webapp
